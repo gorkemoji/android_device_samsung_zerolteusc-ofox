@@ -1,5 +1,5 @@
-/boot		emmc		/dev/block/platform/15570000.ufs/by-name/BOOT    flags=backup=1;display="Boot"
-/recovery		emmc		/dev/block/platform/15570000.ufs/by-name/RECOVERY flags=backup=1;display="Recovery"
+/boot		emmc		/dev/block/platform/15570000.ufs/by-name/BOOT    flags=backup=1;display="Boot";flashimg=1
+/recovery		emmc		/dev/block/platform/15570000.ufs/by-name/RECOVERY flags=backup=1;display="Recovery";flashimg=1
 /system		ext4		/dev/block/platform/15570000.ufs/by-name/SYSTEM flags=backup=1;display="System"
 /data		ext4		/dev/block/platform/15570000.ufs/by-name/USERDATA	flags=backup=1;encryptable=footer;length=-20480;display="Data"
 /cache		ext4		/dev/block/platform/15570000.ufs/by-name/CACHE flags=backup=1;display="Cache"
