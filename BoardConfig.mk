@@ -77,3 +77,7 @@ TW_INCLUDE_CRYPTO := true
 #TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
+
+# PBRP Flags
+PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
+PB_DISABLE_DEFAULT_DM_VERITY := true
