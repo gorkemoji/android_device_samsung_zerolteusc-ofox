@@ -5,7 +5,7 @@ Add to `.repo/local_manifests/zerolteusc.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/samsung/zerolteusc" name="android_device_samsung_zerolteusc" remote="gorkemoji" revision="fox-6.0" />
+	<project path="device/samsung/zerolteusc" name="android_device_samsung_zerolteusc" remote="gorkemoji" revision="fox_6.0" />
 </manifest>
 ```
 
