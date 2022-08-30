@@ -1,11 +1,13 @@
 USE_CAMERA_STUB := true
+DEVICE_TREE := device/samsung/zerolteusc
 
+# Bootloader
+BOARD_VENDOR := samsung
+TARGET_BOARD_PLATFORM := exynos7420
+TARGET_SOC := exynos7420
+TARGET_BOARD_PLATFORM_GPU := mali-t760mp8
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := samsungexynos7420
-
-# Platform
-TARGET_BOARD_PLATFORM := exynos7420
-TARGET_BOARD_PLATFORM_GPU := mali-t760mp8
 
 # Flags
 #TARGET_GLOBAL_CFLAGS +=
@@ -26,16 +28,19 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 
+# Kernel
+LZMA_COMPRESSION := -9
+LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
-
 BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 002RU = recovery kernel, 002KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SYSMAGIC002RU
 
+# File systems
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x001C00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x002200000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x10E000000
@@ -54,6 +59,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/zerolteusc/bootimg.mk
 
 # TWRP specific build flags
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -78,6 +84,27 @@ TW_INCLUDE_CRYPTO := true
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
 
-# PBRP Flags
-PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
-PB_DISABLE_DEFAULT_DM_VERITY := true
+# Asian region languages
+TW_EXTRA_LANGUAGES := true
+
+#SHRP_Variables
+SHRP_PATH := device/samsung/zerolteusc
+SHRP_MAINTAINER := gorkemoji
+SHRP_DEVICE_CODE := zerolteusc
+SHRP_EDL_MODE := 0
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/devices/virtual/camera/flash/rear_flash
+SHRP_FONP_2 :=
+SHRP_FONP_3 :=
+SHRP_FLASH_MAX_BRIGHTNESS := 1
+SHRP_REC := /dev/block/platform/15570000.ufs/by-name/RECOVERY
+SHRP_AB := false
+SHRP_REC_TYPE := Normal
+SHRP_DEVICE_TYPE := A_Only
+SHRP_EXPRESS := true
+SHRP_OFFICIAL := true
+SHRP_DARK := true
+SHRP_ALT_REBOOT := true
