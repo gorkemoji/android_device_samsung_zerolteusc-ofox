@@ -1,5 +1,4 @@
 USE_CAMERA_STUB := true
-DEVICE_TREE := device/samsung/zerolteusc
 
 # Bootloader
 BOARD_VENDOR := samsung
