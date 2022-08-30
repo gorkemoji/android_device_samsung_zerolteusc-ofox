@@ -1,11 +1,11 @@
-## OrangeFox device tree for US Cellular Samsung Galaxy S6 Edge
+## PBRP device tree for US Cellular Samsung Galaxy S6 Edge
 
 Add to `.repo/local_manifests/zerolteusc.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/samsung/zerolteusc" name="android_device_samsung_zerolteusc" remote="gorkemoji" revision="fox_6.0" />
+	<project path="device/samsung/zerolteusc" name="android_device_samsung_zerolteusc" remote="gorkemoji" revision="android-6.0" />
 </manifest>
 ```
 
